@@ -1,1 +1,24 @@
+# 社内文書
 有限会社ベルックス.pdf
+
+# 環境変数・秘密情報（絶対にコミットしない）
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.json
+credentials.json
+config.local.js
+
+# Node.js
+node_modules/
+package.json
+package-lock.json
+
+# OS・エディタ
+.DS_Store
+Thumbs.db
+.vscode/
