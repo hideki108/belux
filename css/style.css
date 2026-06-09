@@ -998,7 +998,7 @@ button {
   border-radius: 2px;
   pointer-events: none;
   z-index: 10;
-  animation: vacancy-sweep 4s ease-in-out infinite;
+  animation: vacancy-sweep 5s ease-in-out infinite;
 }
 
 @keyframes vacancy-sweep {
@@ -1008,7 +1008,7 @@ button {
   100% { transform: translateY(-50%) translateX(-150vw); opacity: 0; }
 }
 
-/* 縦線：画面左から33vw、下から上へゴールド（background-position方式でスマホ対応） */
+/* 縦線：下から上、横線と同じ5s・遅延なしで交差タイミングを同期 */
 .vacancy-sweep-v {
   position: absolute;
   left: 28vw;
@@ -1030,17 +1030,16 @@ button {
     transparent 100%
   );
   background-size: 100% 300%;
-  background-position: 0% 0%;
+  background-position: 0% -100%;
   opacity: 0;
-  animation: vacancy-sweep-v 4s ease-in-out infinite;
-  animation-delay: -1.4s;
+  animation: vacancy-sweep-v 5s ease-in-out infinite;
 }
 
 @keyframes vacancy-sweep-v {
   0%   { background-position: 0% -100%; opacity: 0; }
   8%   { opacity: 1; }
   92%  { opacity: 1; }
-  100% { background-position: 0% 200%;  opacity: 0; }
+  100% { background-position: 0% 140%;  opacity: 0; }
 }
 
 .vacancy-grid {
