@@ -532,30 +532,47 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100vw;
-  height: 3px;
-  margin-left: -50vw;
+  width: 160vw;
+  height: 2px;
+  margin-left: -80vw;
   opacity: 0;
-  transform: translateY(-50%) translateX(-150vw);
+  border-radius: 1px;
+  pointer-events: none;
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(196, 168, 71, 0.3) 30%,
-    rgba(255, 230, 100, 0.95) 50%,
-    rgba(196, 168, 71, 0.3) 70%,
+    rgba(45, 45, 45, 0.2) 35%,
+    rgba(45, 45, 45, 0.85) 50%,
+    rgba(45, 45, 45, 0.2) 65%,
     transparent 100%
   );
-  box-shadow: 0 0 10px 2px rgba(255, 220, 80, 0.5);
-  border-radius: 2px;
-  pointer-events: none;
-  animation: logo-sweep 4s ease-in-out infinite;
+  box-shadow: 0 0 6px 1px rgba(45, 45, 45, 0.25);
 }
 
-@keyframes logo-sweep {
-  0%   { transform: translateY(-50%) translateX(-150vw); opacity: 0; }
+/* 右上 → 左下（屋根の左斜面と同角度） */
+.hero-sweep-a {
+  transform: translateY(-50%) rotate(-35deg) translateX(200vw);
+  animation: hero-sweep-a 4s ease-in-out infinite;
+}
+
+/* 左上 → 右下（対称）→ 中央で交差 */
+.hero-sweep-b {
+  transform: translateY(-50%) rotate(35deg) translateX(-200vw);
+  animation: hero-sweep-b 4s ease-in-out infinite;
+}
+
+@keyframes hero-sweep-a {
+  0%   { transform: translateY(-50%) rotate(-35deg) translateX(200vw);  opacity: 0; }
   8%   { opacity: 1; }
   92%  { opacity: 1; }
-  100% { transform: translateY(-50%) translateX(150vw); opacity: 0; }
+  100% { transform: translateY(-50%) rotate(-35deg) translateX(-200vw); opacity: 0; }
+}
+
+@keyframes hero-sweep-b {
+  0%   { transform: translateY(-50%) rotate(35deg) translateX(-200vw);  opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateY(-50%) rotate(35deg) translateX(200vw);   opacity: 0; }
 }
 
 .hero-logo {
