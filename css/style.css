@@ -525,36 +525,37 @@ button {
 .hero-logo-wrap {
   position: relative;
   display: block;
-  overflow: hidden;
   width: min(480px, 82vw);
 }
 
 .hero-sweep {
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 60%;
+  left: 50%;
+  width: 100vw;
   height: 3px;
-  transform: translate(-100%, -50%);
+  margin-left: -50vw;
+  opacity: 0;
+  transform: translateY(-50%) translateX(-150vw);
   background: linear-gradient(
     to right,
     transparent 0%,
-    rgba(196, 168, 71, 0.6) 25%,
-    rgba(255, 230, 100, 1) 50%,
-    rgba(196, 168, 71, 0.6) 75%,
+    rgba(196, 168, 71, 0.3) 30%,
+    rgba(255, 230, 100, 0.95) 50%,
+    rgba(196, 168, 71, 0.3) 70%,
     transparent 100%
   );
-  box-shadow: 0 0 8px 2px rgba(255, 220, 80, 0.6);
+  box-shadow: 0 0 10px 2px rgba(255, 220, 80, 0.5);
   border-radius: 2px;
   pointer-events: none;
-  animation: logo-sweep 3.5s ease-in-out infinite;
+  animation: logo-sweep 4s ease-in-out infinite;
 }
 
 @keyframes logo-sweep {
-  0%   { transform: translate(-100%, -50%); opacity: 0; }
-  10%  { opacity: 1; }
-  90%  { opacity: 1; }
-  100% { transform: translate(267%, -50%); opacity: 0; }
+  0%   { transform: translateY(-50%) translateX(-150vw); opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateY(-50%) translateX(150vw); opacity: 0; }
 }
 
 .hero-logo {
