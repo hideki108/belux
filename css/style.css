@@ -525,7 +525,6 @@ button {
 .hero-logo {
   width: min(480px, 82vw);
   height: auto;
-  mix-blend-mode: multiply;
 }
 
 .hero-title {
