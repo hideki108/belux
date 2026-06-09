@@ -554,9 +554,8 @@ button {
 ============================================================ */
 .concerns {
   text-align: center;
-  /* 背景写真2枚目 + 白オーバーレイ（カード・文字の視認性確保） */
   background:
-    linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)),
+    linear-gradient(rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)),
     url('../施工実績写真/背景/2.jpg') center / cover no-repeat;
 }
 
@@ -568,16 +567,19 @@ button {
 }
 
 .concern-item {
-  background: var(--color-cream);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: var(--radius-lg);
   padding: 2rem 1.5rem;
-  transition: transform var(--transition), box-shadow var(--transition);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
 .concern-item:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .concern-icon {
