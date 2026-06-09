@@ -950,7 +950,7 @@ button {
   box-shadow: 0 0 8px 2px rgba(45, 45, 45, 0.3);
   border-radius: 2px;
   pointer-events: none;
-  z-index: 1;
+  z-index: 10;
   animation: vacancy-sweep 4s ease-in-out infinite;
 }
 
@@ -1054,7 +1054,7 @@ button {
   align-items: center;
   gap: 0.3em;
   padding: 0.6em 1.5em;
-  background: transparent;
+  background: var(--color-white);
   color: var(--color-gold-dark);
   border: 2px solid var(--color-gold);
   border-radius: var(--radius);
@@ -1064,7 +1064,7 @@ button {
   text-decoration: none;
   margin-top: 0.25rem;
   position: relative;
-  z-index: 2;
+  z-index: 20;
 }
 
 .vacancy-card-link:hover,
