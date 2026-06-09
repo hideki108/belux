@@ -40,9 +40,9 @@
   --color-cream-dark:  #F0E8D4;   /* クリーム（濃） */
   --color-border:      #E0D5BC;   /* ボーダー */
 
-  /* フォント（日本語に対応した游ゴシック系） */
-  --font-main: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic',
-               'Yu Gothic', 'Meiryo', sans-serif;
+  /* フォント（やわらかい丸ゴシック体） */
+  --font-main: 'M PLUS Rounded 1c', 'Hiragino Maru Gothic ProN', 'Hiragino Sans',
+               'BIZ UDPGothic', 'Yu Gothic', 'Meiryo', sans-serif;
 
   /* レイアウト */
   --max-width:      1100px;
