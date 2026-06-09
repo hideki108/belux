@@ -1608,9 +1608,9 @@ button {
     display: none;
   }
 
-  /* 選ばれる理由：4列 */
+  /* 選ばれる理由：3列（5枚を綺麗に並べる） */
   .reasons-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* 対応工事：4列 */
