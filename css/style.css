@@ -591,9 +591,9 @@ button {
   100% { transform: translateY(-50%) translateX(150vw);  opacity: 0; }
 }
 
-/* 右上 → 左下（屋根の左斜面と同角度）― アンカーをロゴの「c」付近（左端から75%）に設定 */
+/* 右上 → 左下（屋根の左斜面と同角度）― アンカーをロゴの「c」付近（左端から85%）に設定 */
 .hero-sweep-a {
-  left: 75%;
+  left: 85%;
   transform: translateY(-50%) rotate(-35deg) translateX(200vw);
   animation: hero-sweep-a 4s ease-in-out infinite;
 }
