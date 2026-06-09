@@ -1008,35 +1008,38 @@ button {
   100% { transform: translateY(-50%) translateX(-150vw); opacity: 0; }
 }
 
-/* 縦線：画面左から25vw、下から上へゴールド */
+/* 縦線：画面左から33vw、下から上へゴールド（background-position方式でスマホ対応） */
 .vacancy-sweep-v {
   position: absolute;
-  left: 25vw;
-  top: 50%;
+  left: 33vw;
+  top: 0;
+  bottom: 0;
   width: 3px;
-  height: 120vh;
-  transform: translateX(-50%) translateY(100vh);
-  opacity: 0;
+  transform: translateX(-50%);
   pointer-events: none;
-  background: linear-gradient(
-    to top,
-    transparent 0%,
-    rgba(196, 168, 71, 0.25) 30%,
-    rgba(255, 230, 100, 0.95) 50%,
-    rgba(196, 168, 71, 0.25) 70%,
-    transparent 100%
-  );
-  box-shadow: 0 0 8px 2px rgba(255, 220, 80, 0.45);
   border-radius: 2px;
   z-index: 10;
+  background: linear-gradient(
+    to top,
+    transparent   0%,
+    transparent  35%,
+    rgba(196, 168, 71, 0.25) 42%,
+    rgba(255, 230, 100, 0.95) 50%,
+    rgba(196, 168, 71, 0.25) 58%,
+    transparent  65%,
+    transparent 100%
+  );
+  background-size: 100% 300%;
+  background-position: 0% 0%;
+  opacity: 0;
   animation: vacancy-sweep-v 4s ease-in-out infinite;
 }
 
 @keyframes vacancy-sweep-v {
-  0%   { transform: translateX(-50%) translateY(100vh);  opacity: 0; }
+  0%   { background-position: 0% 200%; opacity: 0; }
   8%   { opacity: 1; }
   92%  { opacity: 1; }
-  100% { transform: translateX(-50%) translateY(-160vh); opacity: 0; }
+  100% { background-position: 0% -100%; opacity: 0; }
 }
 
 .vacancy-grid {
