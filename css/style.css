@@ -1033,13 +1033,14 @@ button {
   background-position: 0% 0%;
   opacity: 0;
   animation: vacancy-sweep-v 4s ease-in-out infinite;
+  animation-delay: -1.2s;
 }
 
 @keyframes vacancy-sweep-v {
-  0%   { background-position: 0% 200%; opacity: 0; }
+  0%   { background-position: 0% -100%; opacity: 0; }
   8%   { opacity: 1; }
   92%  { opacity: 1; }
-  100% { background-position: 0% -100%; opacity: 0; }
+  100% { background-position: 0% 200%;  opacity: 0; }
 }
 
 .vacancy-grid {
