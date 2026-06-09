@@ -1450,6 +1450,9 @@ button {
 
 .footer-logo {
   width: 100px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 6px;
 }
 
 .footer-company {
