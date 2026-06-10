@@ -1086,6 +1086,34 @@ button {
   height: 32px;
 }
 
+.vacancy-card-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+}
+.vacancy-card-badge-row::before,
+.vacancy-card-badge-row::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #000;
+}
+
+.vacancy-card-badge {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 0.3em 0.9em;
+  background: var(--color-gold-light);
+  color: var(--color-gold-dark);
+  border: 1px solid var(--color-gold);
+  border-radius: 2em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
 .vacancy-card-name {
   font-size: 1.05rem;
   font-weight: 700;
@@ -1106,27 +1134,16 @@ button {
   flex: 1;
 }
 
-.vacancy-card-tel {
+.vacancy-card-address {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.4em;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: var(--color-text);
-  font-weight: 600;
 }
 
-.vacancy-card-tel a {
-  color: var(--color-dark);
-  transition: color var(--transition);
-}
-
-.vacancy-card-tel a:hover,
-.vacancy-card-tel a:focus-visible {
-  color: var(--color-gold-dark);
-}
-
-.vacancy-card-tel svg {
+.vacancy-card-address svg {
   color: var(--color-gold);
   flex-shrink: 0;
 }

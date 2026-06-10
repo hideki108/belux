@@ -427,16 +427,16 @@
 
 
 /* ============================================================
-   8. 空き家相談 sweep線の縦位置を「詳しくはこちら」ボタン中央に合わせる
+   8. 空き家相談 sweep線の縦位置をカード下端に合わせる
 ============================================================ */
 (function initVacancySweepPosition() {
   var section = document.querySelector('.vacancy');
-  var link    = document.querySelector('.vacancy-card-link');
-  if (!section || !link) return;
+  var card    = document.querySelector('.vacancy-card');
+  if (!section || !card) return;
 
   function setSweepTop() {
-    // link.offsetParent === section（.vacancyがposition:relative）なので直接計算可
-    var topPx = link.offsetTop + link.offsetHeight / 2;
+    // card.offsetParent === section（.vacancyがposition:relative）なので直接計算可
+    var topPx = card.offsetTop + card.offsetHeight;
     section.style.setProperty('--vacancy-sweep-top', topPx + 'px');
   }
 
