@@ -682,7 +682,7 @@ button {
 .concern-item p {
   font-size: 1.05rem;
   font-weight: 600;
-  color: var(--color-dark);
+  color: #000;
   line-height: 1.7;
 }
 
