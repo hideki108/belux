@@ -687,10 +687,30 @@ button {
 }
 
 .concerns-cta-text {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--color-dark);
   margin-bottom: 1.5rem;
+}
+
+.concerns-cta-free {
+  color: var(--color-gold-dark);
+  font-size: 1.2em;
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 1px;
+}
+
+.concerns-cta-btn {
+  font-size: 1.1rem;
+  padding: 1em 2.5em;
+  box-shadow: 0 6px 20px rgba(196, 168, 71, 0.45);
+}
+
+.concerns-cta-note {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.03em;
 }
 
 
