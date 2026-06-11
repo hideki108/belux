@@ -44,6 +44,27 @@
 
 
 /* ============================================================
+   フローティングSNSボタン
+   ヒーローセクションを過ぎたら表示
+============================================================ */
+(function initFloatingSns() {
+  var sns = document.getElementById('floatingSns');
+  if (!sns) return;
+
+  function updateSns() {
+    if (window.scrollY > window.innerHeight * 0.5) {
+      sns.classList.add('is-visible');
+    } else {
+      sns.classList.remove('is-visible');
+    }
+  }
+
+  window.addEventListener('scroll', updateSns, { passive: true });
+  updateSns();
+})();
+
+
+/* ============================================================
    3. ハンバーガーメニュー（スマホ用ドロワーナビ）
 ============================================================ */
 (function initHamburger() {
